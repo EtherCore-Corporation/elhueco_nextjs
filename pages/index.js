@@ -4,9 +4,11 @@ import Gallery from '../components/Gallery'
 import TestimonialsSection from '../components/Testimonials'
 import { motion, useScroll, useTransform } from 'framer-motion'
 import { useEffect, useRef, useState } from 'react'
+import Link from 'next/link'
 
 export default function Home() {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { scrollY } = useScroll();
   const heroRef = useRef(null);
 
@@ -49,35 +51,95 @@ export default function Home() {
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
           isScrolled ? 'bg-black/80 backdrop-blur-md' : 'bg-transparent'
         }`}
-        initial={{ y: -100 }}
-        animate={{ y: 0 }}
-        transition={{ duration: 0.5 }}
+        initial={{ y: -100, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
       >
-        <div className="container mx-auto px-4 py-4 flex justify-between items-center">
+        <div className="container mx-auto px-4 py-3 flex justify-between items-center">
           <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5, delay: 0.2, ease: "easeOut" }}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
           >
-            <Image
-              src="https://gplghsigeueslptewoji.supabase.co/storage/v1/object/public/logos/ELHUECO_LOGO_e_EL-lateral_BLANCO.png"
-              alt="El Hueco Logo"
-              width={180}
-              height={60}
-              className="w-auto h-12"
-              priority
-              quality={100}
-            />
+            <Link href="/">
+              <Image
+                src="https://gplghsigeueslptewoji.supabase.co/storage/v1/object/public/logos/ELHUECO_LOGO_e_EL-lateral_BLANCO.png"
+                alt="El Hueco Logo"
+                width={120}
+                height={40}
+                className="w-auto h-4 md:h-6 transition-transform duration-300"
+                priority
+                quality={100}
+              />
+            </Link>
           </motion.div>
+
+          {/* Menú hamburguesa para móvil */}
+          <button 
+            className="md:hidden text-white p-2"
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+          >
+            <svg 
+              className="w-6 h-6" 
+              fill="none" 
+              stroke="currentColor" 
+              viewBox="0 0 24 24"
+            >
+              {isMenuOpen ? (
+                <path 
+                  strokeLinecap="round" 
+                  strokeLinejoin="round" 
+                  strokeWidth={2} 
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              ) : (
+                <path 
+                  strokeLinecap="round" 
+                  strokeLinejoin="round" 
+                  strokeWidth={2} 
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              )}
+            </svg>
+          </button>
+
+          {/* Menú móvil */}
+          <motion.div
+            className={`md:hidden fixed inset-0 bg-black/95 backdrop-blur-md z-40 ${isMenuOpen ? 'flex' : 'hidden'} items-center justify-center`}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: isMenuOpen ? 1 : 0 }}
+            transition={{ duration: 0.3 }}
+          >
+            <nav className="flex flex-col items-center gap-8">
+              {['inicio', 'espacio', 'servicios', 'equipo', 'contacto'].map((item, index) => (
+                <motion.a
+                  key={item}
+                  href={item === 'inicio' ? '/' : `#${item}`}
+                  className="text-white hover:text-accent-400 transition-colors capitalize text-lg tracking-wide"
+                  initial={{ opacity: 0, y: -20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.3, delay: 0.1 * (index + 1) }}
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  {item}
+                </motion.a>
+              ))}
+            </nav>
+          </motion.div>
+
+          {/* Menú desktop */}
           <nav className="hidden md:flex gap-8">
             {['inicio', 'espacio', 'servicios', 'equipo', 'contacto'].map((item, index) => (
               <motion.a
                 key={item}
                 href={item === 'inicio' ? '/' : `#${item}`}
-                className="text-white hover:text-gray-300 transition-colors capitalize"
+                className="text-white hover:text-accent-400 transition-colors capitalize text-sm tracking-wide"
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.3, delay: 0.1 * (index + 1) }}
+                whileHover={{ y: -2 }}
               >
                 {item}
               </motion.a>
@@ -109,15 +171,15 @@ export default function Home() {
               variants={staggerContainer}
               initial="initial"
               animate="animate"
-              className="max-w-4xl"
+              className="max-w-4xl md:text-left text-center"
             >
-              <motion.div variants={fadeInUp}>
+              <motion.div variants={fadeInUp} className="flex md:justify-start justify-center">
                 <Image
                   src="https://gplghsigeueslptewoji.supabase.co/storage/v1/object/public/logos/ELHUECO_LOGO_Emayuscula_EL-lateral_BLANCO.png"
                   alt="El Hueco Logo"
-                  width={400}
-                  height={150}
-                  className="w-auto h-32 mb-8"
+                  width={150}
+                  height={56}
+                  className="w-auto h-12 mb-8"
                   quality={100}
                   priority
                 />
@@ -137,7 +199,7 @@ export default function Home() {
               
               <motion.div 
                 variants={fadeInUp}
-                className="flex flex-wrap gap-4"
+                className="flex flex-wrap gap-4 md:justify-start justify-center"
               >
                 <a 
                   href="#contacto" 
@@ -726,8 +788,8 @@ export default function Home() {
               <Image
                 src="https://gplghsigeueslptewoji.supabase.co/storage/v1/object/public/logos/ELHUECO_LOGO_Emayuscula_EL-lateral_BLANCO.png"
                 alt="El Hueco Logo"
-                width={200}
-                height={80}
+                width={75}
+                height={30}
                 className="mx-auto mb-8"
                 quality={100}
                 priority
