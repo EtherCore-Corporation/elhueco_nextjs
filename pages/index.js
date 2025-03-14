@@ -67,11 +67,17 @@ export default function Home() {
               <Image
                 src="https://gplghsigeueslptewoji.supabase.co/storage/v1/object/public/logos/ELHUECO_LOGO_e_EL-lateral_BLANCO.png"
                 alt="El Hueco Logo"
-                width={120}
-                height={40}
-                className="w-auto h-4 md:h-6 transition-transform duration-300"
+                width={90}
+                height={30}
+                className="w-auto h-5 md:h-7 transition-transform duration-300"
                 priority
                 quality={100}
+                style={{ 
+                  imageRendering: 'crisp-edges',
+                  WebkitFontSmoothing: 'antialiased',
+                  transform: 'translateZ(0)',
+                }}
+                unoptimized
               />
             </Link>
           </motion.div>
@@ -113,10 +119,10 @@ export default function Home() {
             transition={{ duration: 0.3 }}
           >
             <nav className="flex flex-col items-center gap-8">
-              {['inicio', 'espacio', 'servicios', 'equipo', 'contacto'].map((item, index) => (
+              {['inicio', 'espacio', 'servicios', 'equipo', 'dossier', 'contacto'].map((item, index) => (
                 <motion.a
                   key={item}
-                  href={item === 'inicio' ? '/' : `#${item}`}
+                  href={item === 'inicio' ? '/' : `/${item}`}
                   className="text-white hover:text-accent-400 transition-colors capitalize text-lg tracking-wide"
                   initial={{ opacity: 0, y: -20 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -131,10 +137,10 @@ export default function Home() {
 
           {/* Menú desktop */}
           <nav className="hidden md:flex gap-8">
-            {['inicio', 'espacio', 'servicios', 'equipo', 'contacto'].map((item, index) => (
+            {['inicio', 'espacio', 'servicios', 'equipo', 'dossier', 'contacto'].map((item, index) => (
               <motion.a
                 key={item}
-                href={item === 'inicio' ? '/' : `#${item}`}
+                href={item === 'inicio' ? '/' : `/${item}`}
                 className="text-white hover:text-accent-400 transition-colors capitalize text-sm tracking-wide"
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -185,20 +191,49 @@ export default function Home() {
                 />
               </motion.div>
               <motion.h1 
-                variants={fadeInUp}
-                className="text-5xl md:text-7xl font-bold mb-6 tracking-tight"
+                variants={{
+                  initial: { opacity: 0, y: 20 },
+                  animate: {
+                    opacity: 1,
+                    y: 0,
+                    transition: {
+                      duration: 0.8,
+                      ease: [0.6, -0.05, 0.01, 0.99]
+                    }
+                  }
+                }}
+                className="text-5xl md:text-7xl font-orbitron mb-6 tracking-tight"
               >
-                Tu espacio creativo en Madrid
+                <motion.span
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: 0.2 }}
+                  className="block"
+                >
+                  Tu espacio
+                </motion.span>
+                <motion.span
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: 0.4 }}
+                  className="block bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-400"
+                >
+                  creativo en Madrid
+                </motion.span>
               </motion.h1>
               <motion.p 
-                variants={fadeInUp}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.6 }}
                 className="text-xl md:text-2xl text-gray-300 mb-12"
               >
                 Un estudio versátil donde tus producciones cobran vida.
               </motion.p>
               
               <motion.div 
-                variants={fadeInUp}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.8 }}
                 className="flex flex-wrap gap-4 md:justify-start justify-center"
               >
                 <a 
@@ -306,7 +341,7 @@ export default function Home() {
               >
                 DESCUBRE
               </motion.span>
-              <h2 className="text-5xl font-bold mb-8 bg-clip-text text-transparent bg-gradient-to-r from-white via-blue-300 to-white font-orbitron tracking-wide">Nuestro Espacio</h2>
+              <h2 className="text-5xl font-orbitron mb-8 bg-clip-text text-transparent bg-gradient-to-r from-white via-blue-300 to-white tracking-wide">Nuestro Espacio</h2>
               <p className="text-xl text-gray-400 max-w-3xl">
                 Descubre cada rincón de El Hueco, un estudio diseñado para dar vida a tus ideas creativas.
                 Un lugar donde la tecnología y el diseño se unen para potenciar tu creatividad.
@@ -333,7 +368,7 @@ export default function Home() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-70 group-hover:opacity-90 transition-opacity duration-300" />
                 <div className="absolute bottom-0 left-0 p-8 z-10">
-                  <h3 className="text-2xl font-bold mb-2 font-orbitron tracking-wide">Ciclorama</h3>
+                  <h3 className="text-2xl font-orbitron mb-2 tracking-wide">Ciclorama</h3>
                   <p className="text-gray-300 text-base max-w-md">Espacio versátil para tus producciones con iluminación profesional.</p>
             </div>
               </motion.div>
@@ -355,7 +390,7 @@ export default function Home() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-70 group-hover:opacity-90 transition-opacity duration-300" />
                 <div className="absolute bottom-0 left-0 p-8 z-10">
-                  <h3 className="text-2xl font-bold mb-2 font-orbitron tracking-wide">Camerinos</h3>
+                  <h3 className="text-2xl font-orbitron mb-2 tracking-wide">Camerinos</h3>
                   <p className="text-gray-300 text-base max-w-xs">Espacios cómodos y funcionales para preparación y maquillaje.</p>
           </div>
               </motion.div>
@@ -378,7 +413,7 @@ export default function Home() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-70 group-hover:opacity-90 transition-opacity duration-300" />
                 <div className="absolute bottom-0 left-0 p-6 z-10">
-                  <h3 className="text-xl font-bold mb-2 font-orbitron tracking-wide">Iluminación</h3>
+                  <h3 className="text-xl font-orbitron mb-2 tracking-wide">Iluminación</h3>
                   <p className="text-gray-300 text-sm max-w-xs">Equipado con la última tecnología.</p>
         </div>
               </motion.div>
@@ -400,7 +435,7 @@ export default function Home() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-70 group-hover:opacity-90 transition-opacity duration-300" />
                 <div className="absolute bottom-0 left-0 p-6 z-10">
-                  <h3 className="text-xl font-bold mb-2 font-orbitron tracking-wide">Pasarela</h3>
+                  <h3 className="text-xl font-orbitron mb-2 tracking-wide">Pasarela</h3>
                   <p className="text-gray-300 text-sm max-w-xs">Amplio espacio para rodajes y producciones de gran formato.</p>
             </div>
               </motion.div>
@@ -422,7 +457,7 @@ export default function Home() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-70 group-hover:opacity-90 transition-opacity duration-300" />
                 <div className="absolute bottom-0 left-0 p-6 z-10">
-                  <h3 className="text-xl font-bold mb-2 font-orbitron tracking-wide">Ciclorama</h3>
+                  <h3 className="text-xl font-orbitron mb-2 tracking-wide">Ciclorama</h3>
                   <p className="text-gray-300 text-sm max-w-xs">Sistema RGB versátil.</p>
               </div>
               </motion.div>
@@ -445,7 +480,7 @@ export default function Home() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-70 group-hover:opacity-90 transition-opacity duration-300" />
                 <div className="absolute bottom-0 left-0 p-6 z-10">
-                  <h3 className="text-xl font-bold mb-2 font-orbitron tracking-wide">Video Mapping</h3>
+                  <h3 className="text-xl font-orbitron mb-2 tracking-wide">Video Mapping</h3>
                   <p className="text-gray-300 text-sm max-w-xs">Tecnología avanzada para proyecciones inmersivas.</p>
               </div>
               </motion.div>
@@ -467,7 +502,7 @@ export default function Home() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-70 group-hover:opacity-90 transition-opacity duration-300" />
                 <div className="absolute bottom-0 left-0 p-6 z-10">
-                  <h3 className="text-xl font-bold mb-2 font-orbitron tracking-wide">Montacargas</h3>
+                  <h3 className="text-xl font-orbitron mb-2 tracking-wide">Montacargas</h3>
                   <p className="text-gray-300 text-sm max-w-xs">Acceso fácil para equipos y materiales pesados.</p>
                 </div>
               </motion.div>
@@ -558,7 +593,7 @@ export default function Home() {
               >
                 TECNOLOGÍA AVANZADA
               </motion.span>
-              <h2 className="text-5xl font-bold mb-8 bg-clip-text text-transparent bg-gradient-to-r from-white via-blue-300 to-white font-orbitron tracking-wide">Servicios</h2>
+              <h2 className="text-5xl font-orbitron mb-8 bg-clip-text text-transparent bg-gradient-to-r from-white via-blue-300 to-white tracking-wide">Servicios</h2>
               <p className="text-xl text-gray-400 max-w-3xl mx-auto">
                 Todo lo que necesitas para tu producción en un solo espacio.
               </p>
@@ -642,7 +677,7 @@ export default function Home() {
                   </div>
 
                   {/* Service content */}
-                  <h3 className="text-2xl font-bold mb-4 font-orbitron tracking-wide group-hover:text-blue-300 transition-colors duration-300">
+                  <h3 className="text-2xl font-orbitron mb-4 font-orbitron tracking-wide group-hover:text-blue-300 transition-colors duration-300">
                     {service.title}
                   </h3>
                   <p className="text-gray-400 group-hover:text-gray-300 transition-colors duration-300">
@@ -707,7 +742,7 @@ export default function Home() {
               transition={{ duration: 0.5 }}
               className="mb-16"
             >
-              <h2 className="text-4xl font-bold mb-8">Nuestro Equipo</h2>
+              <h2 className="text-4xl font-orbitron mb-8">Nuestro Equipo</h2>
               <p className="text-xl text-gray-400 max-w-3xl">
                 Un equipo multidisciplinar con amplia experiencia en el sector audiovisual.
               </p>
@@ -794,7 +829,7 @@ export default function Home() {
                 quality={100}
                 priority
               />
-              <h2 className="text-4xl font-bold mb-8">¿Listo para dar vida a tu proyecto?</h2>
+              <h2 className="text-4xl font-orbitron mb-8">¿Listo para dar vida a tu proyecto?</h2>
               <p className="text-xl text-gray-400 mb-12">
                 Escríbenos y charlamos sobre lo que necesitas para tu producción.
               </p>
@@ -913,7 +948,7 @@ export default function Home() {
                       RESERVA AHORA
                     </motion.span>
                     <motion.h2 
-                      className="text-3xl md:text-4xl font-bold mb-4 font-orbitron tracking-wide"
+                      className="text-3xl md:text-4xl font-orbitron tracking-wide"
                       initial={{ opacity: 0, y: 20 }}
                       whileInView={{ opacity: 1, y: 0 }}
                       viewport={{ once: true }}
@@ -1003,6 +1038,102 @@ export default function Home() {
                   </div>
                 </div>
               </div>
+            </div>
+          </div>
+        </motion.section>
+
+        {/* Mapa Section */}
+        <motion.section
+          className="py-24 bg-neutral-950 relative overflow-hidden"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+        >
+          <div className="container mx-auto px-4">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
+              className="mb-16 text-center"
+            >
+              <motion.span 
+                className="inline-block text-blue-400 font-medium mb-2 font-orbitron tracking-widest"
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+              >
+                UBICACIÓN
+              </motion.span>
+              <h2 className="text-5xl font-orbitron mb-8 bg-clip-text text-transparent bg-gradient-to-r from-white via-blue-300 to-white tracking-wide">
+                Dónde estamos
+              </h2>
+              <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+                Ubicados en el corazón de Madrid, con fácil acceso y parking cercano.
+              </p>
+            </motion.div>
+
+            <div className="relative max-w-5xl mx-auto">
+              {/* Forma orgánica para el mapa */}
+              <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-purple-500/20 blur-3xl transform -skew-y-6"></div>
+              <motion.div
+                initial={{ opacity: 0, scale: 0.95 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.7 }}
+                className="relative"
+              >
+                <div className="relative w-full h-[600px] rounded-[30px] overflow-hidden shadow-2xl"
+                     style={{
+                       clipPath: "polygon(0% 20%, 5% 5%, 20% 0%, 80% 0%, 95% 5%, 100% 20%, 100% 80%, 95% 95%, 80% 100%, 20% 100%, 5% 95%, 0% 80%)"
+                     }}>
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3036.0475039135396!2d-3.6394612239807257!3d40.44609505446391!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd422f51c8f6a2e7%3A0x3d5652afd3bae678!2sAv.%20de%20Daroca%2C%2034%2C%2028017%20Madrid!5e0!3m2!1ses!2ses!4v1709932008965!5m2!1ses!2ses"
+                    width="100%"
+                    height="100%"
+                    style={{ border: 0 }}
+                    allowFullScreen=""
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                  ></iframe>
+                </div>
+
+                {/* Tarjeta de información */}
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: 0.3 }}
+                  className="absolute bottom-8 right-8 bg-black/90 backdrop-blur-md p-6 rounded-2xl border border-white/10 max-w-sm"
+                >
+                  <h3 className="text-xl font-orbitron mb-2">El Hueco</h3>
+                  <p className="text-gray-300 mb-4">Av. de Daroca, 34, 28017 Madrid</p>
+                  <div className="flex items-center gap-4">
+                    <a 
+                      href="tel:+34622018042"
+                      className="flex items-center gap-2 text-blue-400 hover:text-blue-300 transition-colors"
+                    >
+                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                      </svg>
+                      +34 622 018 042
+                    </a>
+                    <a 
+                      href="https://maps.google.com/?q=El+Hueco+Madrid"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2 text-blue-400 hover:text-blue-300 transition-colors"
+                    >
+                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                      </svg>
+                      Cómo llegar
+                    </a>
+                  </div>
+                </motion.div>
+              </motion.div>
             </div>
           </div>
         </motion.section>

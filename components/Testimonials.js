@@ -88,7 +88,7 @@ export default function TestimonialsSection() {
           className="text-center mb-16"
         >
           <motion.span 
-            className="inline-block text-blue-400 font-medium mb-2"
+            className="inline-block text-blue-400 font-orbitron mb-2 tracking-widest"
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
@@ -96,7 +96,7 @@ export default function TestimonialsSection() {
           >
             TESTIMONIOS
           </motion.span>
-          <h2 className="text-5xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-white via-gray-300 to-white">Lo que dicen nuestros clientes</h2>
+          <h2 className="text-5xl font-orbitron mb-4 bg-clip-text text-transparent bg-gradient-to-r from-white via-gray-300 to-white tracking-wide">Lo que dicen nuestros clientes</h2>
           <p className="text-gray-400 max-w-2xl mx-auto">
             Experiencias reales de quienes han confiado en El Hueco para sus proyectos.
           </p>
@@ -140,7 +140,7 @@ export default function TestimonialsSection() {
                     </div>
                     <p className="text-xl md:text-2xl italic mb-6">{testimonials[currentIndex].quote}</p>
                     <div>
-                      <h4 className="text-lg font-bold">{testimonials[currentIndex].name}</h4>
+                      <h4 className="text-lg font-orbitron tracking-wide">{testimonials[currentIndex].name}</h4>
                       <p className="text-gray-400">
                         {testimonials[currentIndex].role}, {testimonials[currentIndex].company}
                       </p>
