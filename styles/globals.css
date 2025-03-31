@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=Now:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.cdnfonts.com/css/le-jour-serif');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: 'Now', sans-serif;
+  }
+  
+  body {
+    @apply bg-black text-white;
+    font-family: 'Now', sans-serif;
+    margin: 0;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Le Jour Serif', serif;
+  }
+
+  .font-heading {
+    font-family: 'Le Jour Serif', serif;
+  }
+
+  .font-body {
+    font-family: 'Now', sans-serif;
+  }
+
+  header a {
+    color: #fff;
+  }
+  
+  section {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    padding-top: 0;
+  }
+  
+  form div {
+    margin-bottom: 1rem;
+  }
+  
+  input, textarea {
+    width: 100%;
+    padding: 0.5rem;
+    box-sizing: border-box;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply px-6 py-3 rounded-lg transition-all duration-300 transform hover:scale-105;
+  }
+  
+  .btn-primary {
+    @apply bg-gradient-to-r from-purple-500 to-pink-500 text-white shadow-lg hover:shadow-xl;
+  }
+}
+
+/* Animaciones personalizadas */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+  100% { transform: translateY(0px); }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Video background styles */
+iframe {
+  pointer-events: none;
+}
+
+/* RESPONSIVE MEDIA QUERIES */
+@media (max-width: 768px) {
+  /* General text size adjustments */
+  h1 {
+    font-size: 2.5rem !important;
+    line-height: 1.2 !important;
+  }
+  
+  h2 {
+    font-size: 2rem !important;
+    line-height: 1.2 !important;
+  }
+  
+  /* Container padding for mobile */
+  .container {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+  
+  /* Adjust section padding for mobile but preserve no gap between sections */
+  section {
+    padding-top: 3rem !important;
+    padding-bottom: 3rem !important;
+    margin-bottom: 0 !important;
+  }
+  
+  /* Adjust spacing for stacked elements */
+  .space-y-4 > * + * {
+    margin-top: 0.75rem !important;
+  }
+  
+  /* Project sections text adjustments */
+  .text-8xl {
+    font-size: 3.5rem !important;
+    line-height: 1.1 !important;
+  }
+  
+  .text-5xl, .text-6xl, .text-7xl {
+    font-size: 2.5rem !important;
+    line-height: 1.2 !important;
+  }
+  
+  /* Adjust padding for content containers in full-height sections */
+  .min-h-screen .p-16 {
+    padding: 1.5rem !important;
+  }
+  
+  /* Fix for iframes to ensure they display properly on mobile */
+  iframe {
+    width: 100% !important;
+    height: 100% !important;
+    transform: none !important;
+    top: 0 !important;
+    left: 0 !important;
+  }
+
+  /* Button adjustments */
+  .btn, a[href^="#"], a[href^="/"] {
+    padding: 0.75rem 1.25rem !important;
+    font-size: 0.9rem !important;
+  }
+  
+  /* Improve grid layouts for mobile */
+  .grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem !important;
+  }
+  
+  /* Logo size adjustments */
+  .h-24 {
+    height: 4rem !important;
+  }
+  
+  /* Adjust bottom margin for logo in hero */
+  .mb-12 {
+    margin-bottom: 2rem !important;
+  }
+
+  /* Adjust action buttons in hero sections */
+  .flex.flex-wrap.gap-6, .flex.flex-wrap.gap-4 {
+    flex-direction: column !important;
+    width: 100% !important;
+  }
+  
+  .flex.flex-wrap.gap-6 > a, .flex.flex-wrap.gap-4 > a {
+    width: 100% !important;
+    margin-bottom: 0.75rem !important;
+    text-align: center !important;
+  }
+
+  /* Footer adjustments */
+  footer .grid {
+    gap: 2rem !important;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  /* Medium device adjustments */
+  h1 {
+    font-size: 3.5rem !important;
+  }
+  
+  .text-8xl {
+    font-size: 5rem !important;
+  }
+  
+  .text-7xl {
+    font-size: 4rem !important;
+  }
+  
+  /* Container padding for tablets */
+  .container {
+    padding-left: 2rem !important;
+    padding-right: 2rem !important;
+  }
+  
+  /* Adjust grid for tablets */
+  .grid-cols-3 {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+/* Fix for Safari mobile - prevent zooming when focused on inputs */
+@media screen and (max-width: 768px) {
+  input, select, textarea {
+    font-size: 16px !important;
+  }
+}
+
+/* Eliminar cualquier espacio entre secciones */
+section + section {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+/* Clases específicas para secciones con padding personalizado */
+.section-padded {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+}
+
+/* Sección con fondo blanco */
+.bg-white-section {
+  background-color: white !important;
+  color: black !important;
+}
+
+.bg-white-section h1,
+.bg-white-section h2,
+.bg-white-section h3,
+.bg-white-section h4,
+.bg-white-section h5,
+.bg-white-section h6 {
+  color: black !important;
+}
+
+.bg-white-section p {
+  color: #333 !important;
+}
+
+/* For dark buttons on white background */
+.bg-white-section .btn-dark {
+  background-color: black !important;
+  color: white !important;
+  border: 2px solid black !important;
+}
+
+/* For outlined buttons on white background */
+.bg-white-section .btn-outlined {
+  background-color: transparent !important;
+  color: black !important;
+  border: 2px solid black !important;
+} 
