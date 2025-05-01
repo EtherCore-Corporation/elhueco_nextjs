@@ -45,9 +45,10 @@ export default function Home() {
         <title>El Hueco</title>
         <meta name="description" content="Un espacio creativo en Madrid, donde tus producciones cobran vida." />
         <link rel="icon" href="https://gplghsigeueslptewoji.supabase.co/storage/v1/object/public/servicios//favicon.jpeg" />
-        <link rel="apple-touch-icon" href="https://gplghsigeueslptewoji.supabase.co/storage/v1/object/public/servicios//favicon.jpeg" />
+        <link rel="icon" type="image/jpeg" sizes="32x32" href="https://gplghsigeueslptewoji.supabase.co/storage/v1/object/public/servicios//favicon.jpeg" />
+        <link rel="icon" type="image/jpeg" sizes="16x16" href="https://gplghsigeueslptewoji.supabase.co/storage/v1/object/public/servicios//favicon.jpeg" />
+        <link rel="apple-touch-icon" sizes="180x180" href="https://gplghsigeueslptewoji.supabase.co/storage/v1/object/public/servicios//favicon.jpeg" />
         <meta name="msapplication-TileImage" content="https://gplghsigeueslptewoji.supabase.co/storage/v1/object/public/servicios//favicon.jpeg" />
-        <meta property="og:image" content="https://gplghsigeueslptewoji.supabase.co/storage/v1/object/public/servicios//favicon.jpeg" />
       </Head>
 
       <Header />

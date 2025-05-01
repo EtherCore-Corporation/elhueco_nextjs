@@ -15,7 +15,11 @@ const services = [
       "Fondos de diferentes colores",
       "Camerinos con espejo",
     ],
+<<<<<<< HEAD
     image: "https://gplghsigeueslptewoji.supabase.co/storage/v1/object/public/servicios//Dosier%20El%20Hueco%202025.jpg",
+=======
+    image: "https://gplghsigeueslptewoji.supabase.co/storage/v1/object/public/servicios//Camerinos%20Independientes.jpg",
+>>>>>>> 359e9e240c1a60e3646c6aa2d7097f91ccd82bb0
     icon: (
       <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z" />
@@ -33,7 +37,11 @@ const services = [
       "Montacargas para material",
       "Zona de control técnico",
     ],
+<<<<<<< HEAD
     image: "https://gplghsigeueslptewoji.supabase.co/storage/v1/object/public/project-images/Ultimas/Producciones%20audiovisuales.jpg",
+=======
+    image: "https://gplghsigeueslptewoji.supabase.co/storage/v1/object/public/servicios//Sistema%20de%20Lluvia%20Artificial.jpg",
+>>>>>>> 359e9e240c1a60e3646c6aa2d7097f91ccd82bb0
     icon: (
       <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
@@ -50,7 +58,11 @@ const services = [
       "Equipo de sonido",
       "Catering disponible",
     ],
+<<<<<<< HEAD
     image: "https://gplghsigeueslptewoji.supabase.co/storage/v1/object/public/project-images/espacio/Whats_App_Image_2022_11_24_at_11_11_31_6deeeb24b0.jpeg",
+=======
+    image: "https://gplghsigeueslptewoji.supabase.co/storage/v1/object/public/servicios//Eventos%20y%20Presentaciones.jpg",
+>>>>>>> 359e9e240c1a60e3646c6aa2d7097f91ccd82bb0
     icon: (
       <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
@@ -67,12 +79,17 @@ const services = [
       "Set virtual disponible",
       "Soporte técnico",
     ],
+<<<<<<< HEAD
     image: "https://gplghsigeueslptewoji.supabase.co/storage/v1/object/public/project-images/Ultimas/FOTO%20STREAMING.jpg",
+=======
+    image: "https://gplghsigeueslptewoji.supabase.co/storage/v1/object/public/servicios//Streaming%20y%20Directos.jpg",
+>>>>>>> 359e9e240c1a60e3646c6aa2d7097f91ccd82bb0
     icon: (
       <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
       </svg>
     )
+<<<<<<< HEAD
   },
   {
     id: 5,
@@ -107,6 +124,8 @@ const services = [
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
       </svg>
     )
+=======
+>>>>>>> 359e9e240c1a60e3646c6aa2d7097f91ccd82bb0
   }
 ];
 
@@ -130,14 +149,22 @@ export default function Servicios() {
             className="text-center mb-16"
           >
             <motion.span 
+<<<<<<< HEAD
               className="inline-block text-black font-medium mb-2 font-helvetica tracking-widest"
+=======
+              className="inline-block text-black font-medium mb-2 font-serif tracking-widest"
+>>>>>>> 359e9e240c1a60e3646c6aa2d7097f91ccd82bb0
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5, delay: 0.1 }}
             >
               NUESTROS SERVICIOS
             </motion.span>
+<<<<<<< HEAD
             <h1 className="text-5xl font-helvetica mb-6">
+=======
+            <h1 className="text-5xl font-serif mb-6">
+>>>>>>> 359e9e240c1a60e3646c6aa2d7097f91ccd82bb0
               Todo lo que necesitas
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto font-sans">
@@ -154,7 +181,11 @@ export default function Servicios() {
           >
             <div className="relative h-96 overflow-hidden">
               <Image
+<<<<<<< HEAD
                 src="https://gplghsigeueslptewoji.supabase.co/storage/v1/object/public/project-images/servicios/Pasarela tecnica.jpg"
+=======
+                src="https://gplghsigeueslptewoji.supabase.co/storage/v1/object/public/servicios//Sistema%20de%20Lluvia%20Artificial.jpg"
+>>>>>>> 359e9e240c1a60e3646c6aa2d7097f91ccd82bb0
                 alt="Servicios destacados en El Hueco"
                 fill
                 className="object-cover"
@@ -164,7 +195,11 @@ export default function Servicios() {
               <div className="absolute inset-0 bg-black/40" />
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="text-center text-white max-w-3xl px-4">
+<<<<<<< HEAD
                   <h2 className="text-4xl md:text-5xl font-helvetica mb-6">
+=======
+                  <h2 className="text-4xl md:text-5xl font-serif mb-6">
+>>>>>>> 359e9e240c1a60e3646c6aa2d7097f91ccd82bb0
                     Equipamiento profesional y experiencia
                   </h2>
                   <p className="text-xl md:text-2xl mb-8 font-sans">
@@ -185,7 +220,11 @@ export default function Servicios() {
           </motion.div>
 
           {/* Services Grid */}
+<<<<<<< HEAD
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+=======
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
+>>>>>>> 359e9e240c1a60e3646c6aa2d7097f91ccd82bb0
             {services.map((service, index) => (
               <motion.div
                 key={service.id}
@@ -206,7 +245,11 @@ export default function Servicios() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent transition-opacity duration-300 group-hover:opacity-80" />
                   <div className="absolute bottom-0 left-0 w-full p-6 text-white transform translate-y-2 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
+<<<<<<< HEAD
                     <h3 className="text-2xl font-helvetica mb-2">{service.title}</h3>
+=======
+                    <h3 className="text-2xl font-serif mb-2">{service.title}</h3>
+>>>>>>> 359e9e240c1a60e3646c6aa2d7097f91ccd82bb0
                     <p className="text-white/90 text-sm font-sans">{service.description}</p>
                   </div>
                 </div>
@@ -217,7 +260,11 @@ export default function Servicios() {
                     <div className="p-3 border border-black text-black bg-white/90">
                       {service.icon}
                     </div>
+<<<<<<< HEAD
                     <h3 className="text-2xl font-helvetica">{service.title}</h3>
+=======
+                    <h3 className="text-2xl font-serif">{service.title}</h3>
+>>>>>>> 359e9e240c1a60e3646c6aa2d7097f91ccd82bb0
                   </div>
                   <p className="text-gray-600 mb-6 font-sans">{service.description}</p>
                   <ul className="space-y-3">
@@ -252,7 +299,11 @@ export default function Servicios() {
           >
             <div className="bg-neutral-100 p-8 border-l-4 border-black">
               <div className="text-4xl mb-4">📸</div>
+<<<<<<< HEAD
               <h3 className="text-xl font-helvetica mb-3">Fotografía</h3>
+=======
+              <h3 className="text-xl font-serif mb-3">Fotografía</h3>
+>>>>>>> 359e9e240c1a60e3646c6aa2d7097f91ccd82bb0
               <p className="text-gray-600 mb-4 font-sans">Sesiones fotográficas profesionales con equipamiento de primer nivel y asistencia técnica.</p>
               <ul className="space-y-2 text-sm text-gray-700 font-sans">
                 <li>• Fotografía de producto</li>
@@ -264,7 +315,11 @@ export default function Servicios() {
 
             <div className="bg-neutral-100 p-8 border-l-4 border-black">
               <div className="text-4xl mb-4">🎬</div>
+<<<<<<< HEAD
               <h3 className="text-xl font-helvetica mb-3">Audiovisual</h3>
+=======
+              <h3 className="text-xl font-serif mb-3">Audiovisual</h3>
+>>>>>>> 359e9e240c1a60e3646c6aa2d7097f91ccd82bb0
               <p className="text-gray-600 mb-4 font-sans">Producciones audiovisuales con equipamiento técnico avanzado y soporte profesional.</p>
               <ul className="space-y-2 text-sm text-gray-700 font-sans">
                 <li>• Videoclips</li>
@@ -276,7 +331,11 @@ export default function Servicios() {
 
             <div className="bg-neutral-100 p-8 border-l-4 border-black">
               <div className="text-4xl mb-4">🎭</div>
+<<<<<<< HEAD
               <h3 className="text-xl font-helvetica mb-3">Eventos</h3>
+=======
+              <h3 className="text-xl font-serif mb-3">Eventos</h3>
+>>>>>>> 359e9e240c1a60e3646c6aa2d7097f91ccd82bb0
               <p className="text-gray-600 mb-4 font-sans">Espacio versátil para todo tipo de eventos y presentaciones con infraestructura completa.</p>
               <ul className="space-y-2 text-sm text-gray-700 font-sans">
                 <li>• Lanzamientos de producto</li>
@@ -310,7 +369,11 @@ export default function Servicios() {
                 </svg>
               </div>
               <div className="relative z-10">
+<<<<<<< HEAD
                 <h2 className="text-4xl font-helvetica mb-6">¿Necesitas más información?</h2>
+=======
+                <h2 className="text-4xl font-serif mb-6">¿Necesitas más información?</h2>
+>>>>>>> 359e9e240c1a60e3646c6aa2d7097f91ccd82bb0
                 <p className="text-gray-600 mb-8 text-lg max-w-2xl font-sans">
                   Contáctanos para discutir tu proyecto y encontrar la mejor solución para tus necesidades. Ofrecemos asesoramiento personalizado sin compromiso.
                 </p>

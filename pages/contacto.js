@@ -5,7 +5,10 @@ import Link from 'next/link'
 import { useState } from 'react'
 import { createClient } from '@supabase/supabase-js'
 import Header from '../components/Header'
+<<<<<<< HEAD
 import emailjs from '@emailjs/browser'
+=======
+>>>>>>> 359e9e240c1a60e3646c6aa2d7097f91ccd82bb0
 
 const supabase = createClient(
   process.env.NEXT_PUBLIC_SUPABASE_URL,
@@ -33,7 +36,10 @@ export default function Contacto() {
     setStatus({ type: '', message: '' })
 
     try {
+<<<<<<< HEAD
       // 1. Guardar en Supabase
+=======
+>>>>>>> 359e9e240c1a60e3646c6aa2d7097f91ccd82bb0
       const { error } = await supabase
         .from('contact_messages')
         .insert([
@@ -46,6 +52,7 @@ export default function Contacto() {
 
       if (error) throw error
 
+<<<<<<< HEAD
       // 2. Enviar email utilizando EmailJS con la cuenta específica para contacto
       try {
         console.log('Enviando email con EmailJS para contacto...');
@@ -68,13 +75,18 @@ export default function Contacto() {
         // No bloqueamos el proceso si falla el envío del email
       }
 
+=======
+>>>>>>> 359e9e240c1a60e3646c6aa2d7097f91ccd82bb0
       setStatus({
         type: 'success',
         message: 'Mensaje enviado correctamente. Nos pondremos en contacto contigo pronto.'
       })
       setFormData({ name: '', email: '', message: '' })
     } catch (error) {
+<<<<<<< HEAD
       console.error('Error al enviar el mensaje:', error)
+=======
+>>>>>>> 359e9e240c1a60e3646c6aa2d7097f91ccd82bb0
       setStatus({
         type: 'error',
         message: 'Hubo un error al enviar el mensaje. Por favor, inténtalo de nuevo.'
@@ -85,10 +97,16 @@ export default function Contacto() {
   }
 
   const handleChange = (e) => {
+<<<<<<< HEAD
     const { name, value } = e.target
     setFormData(prev => ({
       ...prev,
       [name]: value
+=======
+    setFormData(prev => ({
+      ...prev,
+      [e.target.name]: e.target.value
+>>>>>>> 359e9e240c1a60e3646c6aa2d7097f91ccd82bb0
     }))
   }
 
@@ -97,13 +115,21 @@ export default function Contacto() {
       <Head>
         <title>Contacto | El Hueco</title>
         <meta name="description" content="Contacta con El Hueco - Tu espacio creativo en Madrid para fotografía, video y eventos." />
+<<<<<<< HEAD
         <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+=======
+>>>>>>> 359e9e240c1a60e3646c6aa2d7097f91ccd82bb0
       </Head>
 
       <Header />
 
+<<<<<<< HEAD
       <div className="min-h-screen bg-white pt-24 md:pt-24 lg:pt-24">
         <div className="container mx-auto px-4 py-16 pt-28 md:pt-16">
+=======
+      <div className="min-h-screen bg-white pt-24">
+        <div className="container mx-auto px-4 py-16">
+>>>>>>> 359e9e240c1a60e3646c6aa2d7097f91ccd82bb0
           <motion.div
             initial="initial"
             animate="animate"
@@ -111,7 +137,11 @@ export default function Contacto() {
             className="max-w-4xl mx-auto"
           >
             <div className="text-center mb-16">
+<<<<<<< HEAD
               <h1 className="text-4xl md:text-5xl mb-6 font-bold text-black">Contacto</h1>
+=======
+              <h1 className="text-4xl md:text-5xl mb-6 font-heading">Contacto</h1>
+>>>>>>> 359e9e240c1a60e3646c6aa2d7097f91ccd82bb0
               <p className="text-xl text-gray-600">
                 Ponte en contacto con nosotros para más información, reservas o colaboraciones.
               </p>
@@ -121,14 +151,22 @@ export default function Contacto() {
               {/* Información de contacto */}
               <div className="space-y-12">
                 <div>
+<<<<<<< HEAD
                   <h2 className="text-2xl font-bold text-black mb-4">Ubicación</h2>
+=======
+                  <h2 className="text-2xl font-heading mb-4">Ubicación</h2>
+>>>>>>> 359e9e240c1a60e3646c6aa2d7097f91ccd82bb0
                   <p className="text-gray-600">
                     Nos encontramos en Av. de Daroca, 34, 28017 Madrid
                   </p>
                 </div>
 
                 <div>
+<<<<<<< HEAD
                   <h2 className="text-2xl font-bold text-black mb-4">Forma de Trabajo</h2>
+=======
+                  <h2 className="text-2xl font-heading mb-4">Forma de Trabajo</h2>
+>>>>>>> 359e9e240c1a60e3646c6aa2d7097f91ccd82bb0
                   <p className="text-gray-600">
                     Nuestro método se basa en la colaboración, la transparencia y la co-creación. 
                     Trabajamos de cerca contigo para dar forma a tus ideas desde el concepto hasta 
@@ -137,7 +175,11 @@ export default function Contacto() {
                 </div>
 
                 <div>
+<<<<<<< HEAD
                   <h2 className="text-2xl font-bold text-black mb-4">Contacto Directo</h2>
+=======
+                  <h2 className="text-2xl font-heading mb-4">Contacto Directo</h2>
+>>>>>>> 359e9e240c1a60e3646c6aa2d7097f91ccd82bb0
                   <div className="space-y-2">
                     <a 
                       href="tel:+34622018042"
@@ -146,10 +188,17 @@ export default function Contacto() {
                       +34 622 018 042
                     </a>
                     <a 
+<<<<<<< HEAD
                       href="mailto:admin@el-hueco.es"
                       className="block text-gray-600 hover:text-black transition-colors"
                     >
                       admin@el-hueco.es
+=======
+                      href="mailto:info@elhueco.es"
+                      className="block text-gray-600 hover:text-black transition-colors"
+                    >
+                      info@elhueco.es
+>>>>>>> 359e9e240c1a60e3646c6aa2d7097f91ccd82bb0
                     </a>
                   </div>
                 </div>
@@ -157,12 +206,20 @@ export default function Contacto() {
 
               {/* Formulario */}
               <div className="bg-gray-50 p-8">
+<<<<<<< HEAD
                 <h2 className="text-2xl font-bold text-black mb-6">Envíanos un mensaje</h2>
+=======
+                <h2 className="text-2xl font-heading mb-6">Envíanos un mensaje</h2>
+>>>>>>> 359e9e240c1a60e3646c6aa2d7097f91ccd82bb0
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div>
                     <label 
                       htmlFor="name" 
+<<<<<<< HEAD
                       className="block text-sm font-medium text-gray-700 mb-1"
+=======
+                      className="block text-sm font-sans text-gray-700 mb-1"
+>>>>>>> 359e9e240c1a60e3646c6aa2d7097f91ccd82bb0
                     >
                       Nombre
                     </label>
@@ -173,14 +230,22 @@ export default function Contacto() {
                       required
                       value={formData.name}
                       onChange={handleChange}
+<<<<<<< HEAD
                       className="w-full px-4 py-2 border border-gray-300 text-black focus:border-black focus:ring-1 focus:ring-black outline-none transition-colors"
+=======
+                      className="w-full px-4 py-2 border border-gray-300 font-sans focus:border-black focus:ring-1 focus:ring-black outline-none transition-colors"
+>>>>>>> 359e9e240c1a60e3646c6aa2d7097f91ccd82bb0
                     />
                   </div>
 
                   <div>
                     <label 
                       htmlFor="email" 
+<<<<<<< HEAD
                       className="block text-sm font-medium text-gray-700 mb-1"
+=======
+                      className="block text-sm font-sans text-gray-700 mb-1"
+>>>>>>> 359e9e240c1a60e3646c6aa2d7097f91ccd82bb0
                     >
                       Email
                     </label>
@@ -191,14 +256,22 @@ export default function Contacto() {
                       required
                       value={formData.email}
                       onChange={handleChange}
+<<<<<<< HEAD
                       className="w-full px-4 py-2 border border-gray-300 text-black focus:border-black focus:ring-1 focus:ring-black outline-none transition-colors"
+=======
+                      className="w-full px-4 py-2 border border-gray-300 font-sans focus:border-black focus:ring-1 focus:ring-black outline-none transition-colors"
+>>>>>>> 359e9e240c1a60e3646c6aa2d7097f91ccd82bb0
                     />
                   </div>
 
                   <div>
                     <label 
                       htmlFor="message" 
+<<<<<<< HEAD
                       className="block text-sm font-medium text-gray-700 mb-1"
+=======
+                      className="block text-sm font-sans text-gray-700 mb-1"
+>>>>>>> 359e9e240c1a60e3646c6aa2d7097f91ccd82bb0
                     >
                       Mensaje
                     </label>
@@ -209,7 +282,11 @@ export default function Contacto() {
                       value={formData.message}
                       onChange={handleChange}
                       rows={6}
+<<<<<<< HEAD
                       className="w-full px-4 py-2 border border-gray-300 text-black focus:border-black focus:ring-1 focus:ring-black outline-none transition-colors"
+=======
+                      className="w-full px-4 py-2 border border-gray-300 font-sans focus:border-black focus:ring-1 focus:ring-black outline-none transition-colors"
+>>>>>>> 359e9e240c1a60e3646c6aa2d7097f91ccd82bb0
                     />
                   </div>
 

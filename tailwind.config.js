@@ -9,10 +9,16 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
+<<<<<<< HEAD
         sans: ['"Helvetica World"', '"Open Sans"', 'system-ui', 'sans-serif'],
         serif: ['Le Jour Serif', 'Georgia', 'serif'],
         heading: ['Le Jour Serif', 'sans-serif'],
         body: ['"Helvetica World"', '"Open Sans"', 'system-ui', 'sans-serif'],
+=======
+        sans: ['General Sans', 'system-ui', 'sans-serif'],
+        serif: ['Le Jour Serif', 'Georgia', 'serif'],
+        heading: ['Le Jour Serif', 'sans-serif'],
+>>>>>>> 359e9e240c1a60e3646c6aa2d7097f91ccd82bb0
       },
       colors: {
         primary: {

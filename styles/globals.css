@@ -1,10 +1,16 @@
+<<<<<<< HEAD
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap');
 /* Importación para Helvetica World - se añadirá mediante @font-face ya que no está disponible en Google Fonts */
+=======
+@import url('https://fonts.googleapis.com/css2?family=Now:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.cdnfonts.com/css/le-jour-serif');
+>>>>>>> 359e9e240c1a60e3646c6aa2d7097f91ccd82bb0
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+<<<<<<< HEAD
 /* Configuración de fuentes Helvetica World */
 @font-face {
   font-family: 'Helvetica World';
@@ -27,11 +33,20 @@
 @layer base {
   html {
     font-family: 'Now', 'Open Sans', sans-serif;
+=======
+@layer base {
+  html {
+    font-family: 'Now', sans-serif;
+>>>>>>> 359e9e240c1a60e3646c6aa2d7097f91ccd82bb0
   }
   
   body {
     @apply bg-black text-white;
+<<<<<<< HEAD
     font-family: 'Now', 'Open Sans', sans-serif;
+=======
+    font-family: 'Now', sans-serif;
+>>>>>>> 359e9e240c1a60e3646c6aa2d7097f91ccd82bb0
     margin: 0;
     overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
@@ -39,6 +54,7 @@
   }
 
   h1, h2, h3, h4, h5, h6 {
+<<<<<<< HEAD
     font-family: 'Helvetica World', sans-serif;
   }
 
@@ -56,6 +72,17 @@
 
   .font-body {
     font-family: 'Now', 'Open Sans', sans-serif;
+=======
+    font-family: 'Le Jour Serif', serif;
+  }
+
+  .font-heading {
+    font-family: 'Le Jour Serif', serif;
+  }
+
+  .font-body {
+    font-family: 'Now', sans-serif;
+>>>>>>> 359e9e240c1a60e3646c6aa2d7097f91ccd82bb0
   }
 
   header a {
@@ -76,7 +103,10 @@
     width: 100%;
     padding: 0.5rem;
     box-sizing: border-box;
+<<<<<<< HEAD
     font-family: 'Now', 'Open Sans', sans-serif;
+=======
+>>>>>>> 359e9e240c1a60e3646c6aa2d7097f91ccd82bb0
   }
 }
 

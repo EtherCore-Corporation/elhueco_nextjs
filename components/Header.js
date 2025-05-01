@@ -8,15 +8,24 @@ export default function Header() {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-black">
+<<<<<<< HEAD
       <div className="container mx-auto px-4 py-3 md:py-3 flex justify-between items-center">
         <div className="py-2 md:py-0">
+=======
+      <div className="container mx-auto px-4 py-3 flex justify-between items-center">
+        <div>
+>>>>>>> 359e9e240c1a60e3646c6aa2d7097f91ccd82bb0
           <Link href="/">
             <Image
               src="https://gplghsigeueslptewoji.supabase.co/storage/v1/object/public/logos/ELHUECO_LOGO_Emayuscula_EL-lateral_BLANCO.png"
               alt="El Hueco Logo"
               width={120}
               height={40}
+<<<<<<< HEAD
               className="w-auto h-6 md:h-10"
+=======
+              className="w-auto h-8 md:h-10"
+>>>>>>> 359e9e240c1a60e3646c6aa2d7097f91ccd82bb0
               priority
               quality={100}
               unoptimized

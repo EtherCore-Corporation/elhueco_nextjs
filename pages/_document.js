@@ -6,7 +6,11 @@ export default function Document() {
       <Head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+<<<<<<< HEAD
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+=======
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+>>>>>>> 359e9e240c1a60e3646c6aa2d7097f91ccd82bb0
         <link rel="icon" href="https://gplghsigeueslptewoji.supabase.co/storage/v1/object/public/logos/favicon.ico" />
         <link rel="apple-touch-icon" sizes="180x180" href="https://gplghsigeueslptewoji.supabase.co/storage/v1/object/public/logos/apple-touch-icon.png" />
         <link rel="icon" type="image/png" sizes="32x32" href="https://gplghsigeueslptewoji.supabase.co/storage/v1/object/public/logos/favicon-32x32.png" />

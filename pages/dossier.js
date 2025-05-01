@@ -33,7 +33,11 @@ export default function Dossier() {
         <section className="relative h-screen flex items-center justify-center">
           <div className="absolute inset-0">
             <Image
+<<<<<<< HEAD
               src="https://gplghsigeueslptewoji.supabase.co/storage/v1/object/public/project-images/Ultimas/DOSSIER.jpg"
+=======
+              src="https://gplghsigeueslptewoji.supabase.co/storage/v1/object/public/space_images/ciclorama1.jpeg"
+>>>>>>> 359e9e240c1a60e3646c6aa2d7097f91ccd82bb0
               alt="El Hueco Studio"
               fill
               className="object-cover"
@@ -113,6 +117,7 @@ export default function Dossier() {
               >
                 {[
                   {
+<<<<<<< HEAD
                     src: "https://gplghsigeueslptewoji.supabase.co/storage/v1/object/public/project-images/Ultimas/Ciclorama.jpg",
                     alt: "Ciclorama El Hueco"
                   },
@@ -123,6 +128,18 @@ export default function Dossier() {
                   {
                     src: "https://gplghsigeueslptewoji.supabase.co/storage/v1/object/public/project-images/servicios/Pasarela%20tecnica.jpg",
                     alt: "Pasarela Técnica El Hueco"
+=======
+                    src: "https://gplghsigeueslptewoji.supabase.co/storage/v1/object/public/space_images/ciclorama1.jpeg",
+                    alt: "Ciclorama El Hueco"
+                  },
+                  {
+                    src: "https://gplghsigeueslptewoji.supabase.co/storage/v1/object/public/space_images/video_mapping1.jpeg",
+                    alt: "Video Mapping El Hueco"
+                  },
+                  {
+                    src: "https://gplghsigeueslptewoji.supabase.co/storage/v1/object/public/space_images/iluminacion1.jpeg",
+                    alt: "Iluminación El Hueco"
+>>>>>>> 359e9e240c1a60e3646c6aa2d7097f91ccd82bb0
                   }
                 ].map((image, index) => (
                   <motion.div
@@ -248,7 +265,11 @@ export default function Dossier() {
               >
                 <div className="col-span-12 md:col-span-8 relative h-[450px] group">
                   <Image
+<<<<<<< HEAD
                     src="https://gplghsigeueslptewoji.supabase.co/storage/v1/object/public/project-images/Ultimas/Ciclorama.jpg"
+=======
+                    src="https://gplghsigeueslptewoji.supabase.co/storage/v1/object/public/space_images/ciclorama1.jpeg"
+>>>>>>> 359e9e240c1a60e3646c6aa2d7097f91ccd82bb0
                     alt="Ciclorama"
                     fill
                     className="object-cover"
@@ -263,7 +284,11 @@ export default function Dossier() {
 
                 <div className="col-span-12 md:col-span-4 relative h-[450px] group">
                   <Image
+<<<<<<< HEAD
                     src="https://gplghsigeueslptewoji.supabase.co/storage/v1/object/public/project-images/servicios/Camerino.jpg"
+=======
+                    src="https://gplghsigeueslptewoji.supabase.co/storage/v1/object/public/space_images/camerinos1.jpg"
+>>>>>>> 359e9e240c1a60e3646c6aa2d7097f91ccd82bb0
                     alt="Camerinos"
                     fill
                     className="object-cover"
@@ -278,7 +303,11 @@ export default function Dossier() {
 
                 <div className="col-span-12 md:col-span-6 relative h-[320px] group">
                   <Image
+<<<<<<< HEAD
                     src="https://gplghsigeueslptewoji.supabase.co/storage/v1/object/public/project-images/servicios/Pasarela%20tecnica.jpg"
+=======
+                    src="https://gplghsigeueslptewoji.supabase.co/storage/v1/object/public/space_images/pasarela1.jpg"
+>>>>>>> 359e9e240c1a60e3646c6aa2d7097f91ccd82bb0
                     alt="Pasarela"
                     fill
                     className="object-cover"
@@ -293,7 +322,11 @@ export default function Dossier() {
 
                 <div className="col-span-12 md:col-span-6 relative h-[320px] group">
                   <Image
+<<<<<<< HEAD
                     src="https://gplghsigeueslptewoji.supabase.co/storage/v1/object/public/project-images/Ultimas/Videomapping.jpg"
+=======
+                    src="https://gplghsigeueslptewoji.supabase.co/storage/v1/object/public/space_images/video_mapping1.jpeg"
+>>>>>>> 359e9e240c1a60e3646c6aa2d7097f91ccd82bb0
                     alt="Video Mapping"
                     fill
                     className="object-cover"

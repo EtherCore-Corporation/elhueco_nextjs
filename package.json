@@ -7,12 +7,19 @@
     "start": "next start"
   },
   "dependencies": {
+<<<<<<< HEAD
     "@emailjs/browser": "^4.4.1",
     "@react-google-maps/api": "^2.20.6",
     "@react-spring/web": "^9.7.3",
     "@react-three/fiber": "^8.15.11",
     "@sendgrid/mail": "^8.1.4",
     "@supabase/supabase-js": "^2.49.4",
+=======
+    "@react-google-maps/api": "^2.20.6",
+    "@react-spring/web": "^9.7.3",
+    "@react-three/fiber": "^8.15.11",
+    "@supabase/supabase-js": "^2.49.1",
+>>>>>>> 359e9e240c1a60e3646c6aa2d7097f91ccd82bb0
     "date-fns": "^4.1.0",
     "framer-motion": "^10.16.4",
     "gsap": "^3.12.2",

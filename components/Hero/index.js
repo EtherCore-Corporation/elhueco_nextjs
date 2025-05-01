@@ -46,11 +46,19 @@ const Hero = () => {
             <Image
               src="https://gplghsigeueslptewoji.supabase.co/storage/v1/object/public/logos/ELHUECO_LOGO_Emayuscula_EL-lateral_BLANCO.png"
               alt="El Hueco Logo"
+<<<<<<< HEAD
               width={100}
               height={37}
               priority
               quality={100}
               className="w-auto h-8 mb-6"
+=======
+              width={150}
+              height={56}
+              priority
+              quality={100}
+              className="w-auto h-12 mb-8"
+>>>>>>> 359e9e240c1a60e3646c6aa2d7097f91ccd82bb0
             />
           </motion.div>
 
@@ -60,10 +68,18 @@ const Hero = () => {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="mb-8"
           >
+<<<<<<< HEAD
             <h1 className="text-3xl font-helvetica mb-4 text-black whitespace-nowrap">
               Tu espacio creativo en Madrid
             </h1>
             <p className="text-lg text-black/80 font-now">
+=======
+            <h1 className="text-5xl font-heading mb-4 text-black">
+              Tu espacio<br />
+              creativo en Madrid
+            </h1>
+            <p className="text-xl text-black/80 font-sans">
+>>>>>>> 359e9e240c1a60e3646c6aa2d7097f91ccd82bb0
               Un estudio versátil donde tus producciones cobran vida.
             </p>
           </motion.div>
